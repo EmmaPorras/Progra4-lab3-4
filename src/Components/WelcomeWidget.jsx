@@ -1,9 +1,12 @@
+import { useContext } from "react"
+import { AuthContext } from "../Context/AuthContext"
 
-export default function WelcomeWidget(props){
+export default function WelcomeWidget(){
+    const {user} = useContext(AuthContext)
 
     return (
         <>
-        <h2>Bienvenido a nuestro sitio {props.email}</h2>
+        <h2>Welcome to our site {user.email}</h2>
         </>
     )
 }
